@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="469.0" layoutY="14.0" prefHeight="43.0" prefWidth="262.0" />
+      <MenuBar layoutY="3.0" prefHeight="37.0" prefWidth="1254.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem fx:id="Help" mnemonicParsing="false" onAction="#OuvreApropos" text="A propos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="820.0" fitWidth="1391.0" layoutX="2.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Sans%20titre%20(3).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Button_Ajouter" layoutX="462.0" layoutY="188.0" mnemonicParsing="false" onAction="#AjouterValeurs" prefHeight="43.0" prefWidth="175.0" text="Ajouter &gt;&gt;" />
+      <LineChart fx:id="Graphe1" layoutX="22.0" layoutY="416.0" prefHeight="370.0" prefWidth="538.0" title="Graphe 1">
+         <xAxis>
+            <NumberAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <TableView fx:id="tableauValeurs" layoutX="716.0" layoutY="113.0" prefHeight="183.0" prefWidth="436.0">
+         <columns>
+            <TableColumn fx:id="col_V" prefWidth="136.0" text="V(v)" />
+            <TableColumn fx:id="col_I" prefWidth="154.0" text="I(A)" />
+            <TableColumn fx:id="col_P" prefWidth="144.0" text="P" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="259.0" prefHeight="43.0" prefWidth="175.0" text="Température:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Text_temperature" layoutX="171.0" layoutY="268.0" prefHeight="25.0" prefWidth="203.0" />
+      <TextField fx:id="Text_I" layoutX="171.0" layoutY="197.0" prefHeight="25.0" prefWidth="203.0" />
+      <TextField fx:id="text_V" layoutX="171.0" layoutY="124.0" prefHeight="25.0" prefWidth="203.0" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="188.0" prefHeight="43.0" prefWidth="96.0" text="I(A):">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="24.0" layoutY="115.0" prefHeight="37.0" prefWidth="119.0" text="V(v):">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="Graphe2" layoutX="645.0" layoutY="428.0" prefHeight="370.0" prefWidth="538.0" title="Graphe 2">
+         <xAxis>
+            <NumberAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
